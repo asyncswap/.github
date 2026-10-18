@@ -20,7 +20,7 @@
 | Docs | [docs.asyncswap.org](https://docs.asyncswap.org) |
 | API | [api.asyncswap.org](https://api.asyncswap.org) · [OpenAPI](https://api.asyncswap.org/openapi.json) |
 | For AI agents | [llms.txt](https://app.asyncswap.org/llms.txt) · [capabilities](https://app.asyncswap.org/capabilities.md) · [skills](https://app.asyncswap.org/.well-known/agent-skills/index.json) · [MCP](https://app.asyncswap.org/.well-known/mcp/server-card.json) |
-| Whitepaper | [ASMM: Async Swap Market Maker](https://github.com/asyncswap/whitepaper) |
+| Whitepaper | [AsCSMM: An Async Swap Constant Sum Market Maker](https://github.com/asyncswap/whitepaper) |
 | Follow | [@asyncswap](https://x.com/asyncswap) |
 
 ## Repositories
@@ -30,7 +30,7 @@
 - [v2](https://github.com/asyncswap/v2): the new protocol: hook, Router, on-chain order book and matching engine (Solidity, Foundry). Live on Arc.
 - [protocol](https://github.com/asyncswap/protocol): the original Async Swap contracts. Live on Unichain.
 - [v2-proofs](https://github.com/asyncswap/v2-proofs): Lean 4 + Mathlib specification and machine-checked proofs, maintained by the FormalMind swarm.
-- [whitepaper](https://github.com/asyncswap/whitepaper): ASMM, the Async Swap Market Maker.
+- [whitepaper](https://github.com/asyncswap/whitepaper): AsCSMM, the Async Swap Constant Sum Market Maker (work in progress).
 
 **Tooling we built along the way**
 
