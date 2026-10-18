@@ -1,4 +1,4 @@
-# AsyncSwap Labs
+# Async Swap Labs
 
 **A new frontier for large swaps.** AsyncSwap is an asynchronous limit-order book built as a Uniswap v4 hook, made for institutional-size trades that no pool can absorb without slippage. A maker posts an order on-chain with an exact input and the minimum output they accept; the input is escrowed in the PoolManager. The order then finds its counterparty asynchronously: matched against other resting orders by coincidence of wants, filled from pool liquidity when that satisfies the limit, or settled by an independent filler who pays the maker's price and keeps the spread.
 
@@ -50,4 +50,4 @@
 
 Always read configured addresses and fees from the contracts and from [app.asyncswap.org/llms-full.txt](https://app.asyncswap.org/llms-full.txt); deployments may be replaced before launch.
 
-AsyncSwap Labs, Inc. is based in the United States and is an alumnus of the Atrium Academy Uniswap hook incubator, supported by the Uniswap Foundation.
+Async Swap Labs, Inc. is based in the United States and is an alumnus of the Atrium Academy Uniswap hook incubator, supported by the Uniswap Foundation.
