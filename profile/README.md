@@ -27,8 +27,8 @@
 
 **Protocol**
 
-- [v2](https://github.com/asyncswap/v2): the new protocol: hook, Router, on-chain order book and matching engine (Solidity, Foundry). Live on Arc.
-- [protocol](https://github.com/asyncswap/protocol): the original Async Swap contracts. Live on Unichain.
+- [contracts](https://github.com/asyncswap/contracts): the Async Swap protocol: hook, Router, on-chain order book and matching engine (Solidity, Foundry). Live on Arc.
+- [protocol](https://github.com/asyncswap/protocol): an earlier design without the matching engine. Live on Unichain.
 - [v2-proofs](https://github.com/asyncswap/v2-proofs): Lean 4 + Mathlib specification and machine-checked proofs, maintained by the FormalMind swarm.
 - [whitepaper](https://github.com/asyncswap/whitepaper): Async Swap: Coincidence-of-Wants Matching on Uniswap v4 (work in progress).
 
@@ -45,7 +45,7 @@
 
 | Chain | Chain id | Hook | Router |
 | --- | --- | --- | --- |
-| Arc (new protocol) | 5042 | `0x911947FB822261F19Cb644191244bef29CAE6888` | `0x36f8e4a87c815Fd9Ae4112788DFF6EE64A7193f8` |
+| Arc (contracts) | 5042 | `0x911947FB822261F19Cb644191244bef29CAE6888` | `0x36f8e4a87c815Fd9Ae4112788DFF6EE64A7193f8` |
 | Unichain (original) | 130 | `0x917b2e7C352af82c35C7a4477d7D055C54E76888` | `0x88A76b0991016754425093C8fB440744c5574b75` |
 
 Always read configured addresses and fees from the contracts and from [app.asyncswap.org/llms-full.txt](https://app.asyncswap.org/llms-full.txt); deployments may be replaced before launch.
