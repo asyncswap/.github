@@ -50,4 +50,4 @@
 
 Always read configured addresses and fees from the contracts and from [app.asyncswap.org/llms-full.txt](https://app.asyncswap.org/llms-full.txt); deployments may be replaced before launch.
 
-Async Swap Labs, Inc. is based in the United States and is an alumnus of the Atrium Academy Uniswap hook incubator, supported by the Uniswap Foundation.
+Async Swap Labs, Inc. is based in the United States and is an alumnus of the Atrium Academy Uniswap hook incubator, grant supported by the Uniswap Foundation.
