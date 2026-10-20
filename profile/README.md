@@ -1,16 +1,6 @@
 # Async Swap Labs
 
-**A new frontier for large swaps.** AsyncSwap is a Uniswap v4 hook that turns a swap into a limit order that lives on-chain. A trader names the amount they are selling and the minimum they will accept, the hook holds the funds in the PoolManager, and the order waits on an on-chain order book until someone meets that price. Orders are filled three ways: matched directly against other traders' orders with no protocol fee, filled from the pool's own liquidity when it satisfies the price, or settled by anyone willing to pay the trader's price. Traders get the price they wrote down or better, large trades get a home on Uniswap, liquidity providers earn from fills and priority bids, and every order is a public contract event with no operator to trust.
-
-> **Status.** The contracts on Arc and Unichain are live test deployments. They are not audited and not ready for production use. Try the mechanism, find bugs, open issues; do not put in funds you cannot lose. The official launch is coming soon.
-
-## How it works
-
-- **Orders live on-chain.** Every order, reprice, match, fill and cancel is a contract event. The book is a Patricia radix tree of price levels in the hook's storage; the best opposing price is always found first.
-- **Matching by coincidence of wants.** A new order that crosses the book is matched against up to eight resting orders in the same PoolManager unlock, swapping the two escrows directly with no protocol fee. Partial fills rest on the book.
-- **Application-specific sequencing.** Each pool chooses how same-price orders are ordered: FIFO, or USDC priority bids that rank first and are donated to the liquidity providers active at the current tick. Bids order the book, not the block.
-- **Pool liquidity as fallback, fillers as the last resort.** What the book cannot match is tried against the pool's own v4 liquidity; what remains can be settled by anyone through the Router at the maker's live minimum plus a 0.3% fee.
-- **Proved, not promised.** Escrow, conservation, price-time priority and non-negativity are machine-checked in Lean 4 and re-proved on every protocol commit by the [FormalMind](https://formal.team) swarm.
+Async Swap Labs specializes in async swap applications on Uniswap. We are preparing for the next trillion dollars of on-chain swaps, built with large and institutional-size trades in mind.
 
 ## Where to go
 
@@ -40,14 +30,3 @@
 - [eth-libs](https://github.com/asyncswap/eth-libs): Ethereum client RPC APIs in TypeScript: execution, engine, Flashbots relay, BuilderNet.
 - [uv4-py](https://github.com/asyncswap/uv4-py): Uniswap v4 utilities in Python.
 - [EthereumKit](https://github.com/asyncswap/EthereumKit): an Ethereum package for iOS.
-
-## Deployments (test)
-
-| Chain | Chain id | Hook | Router |
-| --- | --- | --- | --- |
-| Arc (earlier build of contracts) | 5042 | `0x911947FB822261F19Cb644191244bef29CAE6888` | `0x36f8e4a87c815Fd9Ae4112788DFF6EE64A7193f8` |
-| Unichain (earlier design) | 130 | `0x917b2e7C352af82c35C7a4477d7D055C54E76888` | `0x88A76b0991016754425093C8fB440744c5574b75` |
-
-Always read configured addresses and fees from the contracts and from [app.asyncswap.org/llms-full.txt](https://app.asyncswap.org/llms-full.txt); deployments may be replaced before launch.
-
-Async Swap Labs, Inc. is based in the United States and is an alumnus of the Atrium Academy Uniswap hook incubator, grant supported by the Uniswap Foundation.
